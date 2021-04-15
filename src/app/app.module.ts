@@ -3,14 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { VisualizarCepComponent } from './visualizar-cep/visualizar-cep.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    VisualizarCepComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ButtonsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
