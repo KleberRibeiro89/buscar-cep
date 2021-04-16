@@ -13,6 +13,9 @@ export class CepService {
   constructor(private httpClient: HttpClient) { }
 
   public buscarCep(cep: string): Observable<CepModel> {
+    cep = cep.trim();
+    cep = cep.replace('-','');
+    cep = cep.replace(' ','');
     return this.httpClient.get<CepModel>(`${this.url}${cep}/json`)
   }
 
